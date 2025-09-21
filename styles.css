@@ -225,8 +225,8 @@ footer {
      A small right margin maintains spacing between the logo and the navigation links. */
   /* Increase the logo height slightly again so the character and text are
      easily readable while still maintaining balance with the navigation. */
-  height: 80;
-  width: auto;
+  
+  height: 120px;;
   margin-right: 0.6rem;
 }
 
