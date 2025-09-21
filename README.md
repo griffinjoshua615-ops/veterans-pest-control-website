@@ -4,14 +4,17 @@ This repository contains the source code for the official website of **Veterans 
 
 ## Project Overview
 
-Veterans Pest Control is a veteran‑owned business providing residential and commercial pest control services in Georgia and Alabama.  The website highlights the company’s unique value proposition—years of experience in pest management and a commitment to serving the community with integrity.  The site includes:
+Veterans Pest Control is a veteran‑owned business providing residential, commercial and industrial pest control services across Georgia and Alabama. This website showcases the company’s strengths—licensed expertise, a commitment to integrated pest management and community‑focused service. Key features of the site include:
 
-* A responsive design built with vanilla HTML and CSS.
-* A hero section featuring a patriotic theme and a call to action.
-* Sections for services, company background, and contact details.
-* A simple contact form for visitors to request quotes or inspections.
+* **Responsive design:** Built with clean HTML and CSS, the layout adapts to mobile phones, tablets and desktop screens.
+* **Patriotic hero section:** A bold introduction highlighting the business’s veteran ownership and service area, with a clear call‑to‑action button.
+* **Expanded services overview:** A grid of service categories covering general pest control, bed bug elimination, termite treatments, mosquito & tick control, rodent & wildlife management and commercial/industrial programs.
+* **Why choose us:** A section outlining the company’s differentiators—veteran values, licensing and insurance, experience, IPM methodology, eco‑friendly options, satisfaction guarantee and 24/7 response.
+* **Our approach:** A breakdown of the integrated pest management process (inspect & identify, customize a plan, treat & protect, follow up) that informs customers about what to expect.
+* **About us:** Information about the owner and team, service areas and the company’s commitment to excellence.
+* **Contact form:** A form for visitors to request quotes or inspections, along with a prominent phone number.
 
-Future work will include additional pages for specific services, blog posts on pest prevention, integration with a scheduling system, and improved styling using frameworks such as Tailwind or Bootstrap.
+Future enhancements may include dedicated pages for each service category, an FAQ section on common pests, blog articles on prevention tips, integration with online scheduling and refined styling using frameworks such as Tailwind CSS or Bootstrap.
 
 ## Usage
 
