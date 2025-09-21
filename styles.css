@@ -21,7 +21,7 @@ header {
   /* Further reduce the vertical padding and remove space‑between so the logo doesn’t sit all the way at the far left.  
      We’ll push the navigation to the right using margin‑left:auto on the nav so the logo and menu flow together naturally. */
   padding: 0.4rem 1.5rem;
-  display: flex;
+  display: 80;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -225,7 +225,7 @@ footer {
      A small right margin maintains spacing between the logo and the navigation links. */
   /* Increase the logo height slightly again so the character and text are
      easily readable while still maintaining balance with the navigation. */
-  height: 72px;
+  height: 80;
   width: auto;
   margin-right: 0.6rem;
 }
