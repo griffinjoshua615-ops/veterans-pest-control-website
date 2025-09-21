@@ -11,7 +11,7 @@ This repository contains the source code for the official website of **Veterans 
 * **Expanded services overview:** A grid of service categories covering general pest control, bed bug elimination, termite treatments, mosquito & tick control, rodent & wildlife management and commercial/industrial programs.
 * **Why choose us:** A section outlining the company’s differentiators—veteran values, licensing and insurance, experience, IPM methodology, eco‑friendly options, satisfaction guarantee and 24/7 response.
 * **Our approach:** A breakdown of the integrated pest management process (inspect & identify, customize a plan, treat & protect, follow up) that informs customers about what to expect.
-* **Identify pests section:** A gallery of common pests—such as ants, bed bugs, cockroaches, mosquitoes, rodents, termites, spiders and wasps—with descriptions and **illustrated photographs** of each pest. Visitors can quickly recognise pests and know when to call for professional help.
+* **Identify pests section:** A gallery of common pests—such as ants, bed bugs, cockroaches, mosquitoes, rodents, termites, spiders and wasps—with descriptions and **high‑resolution photographs** of each pest. Visitors can quickly recognise pests and know when to call for professional help.
 * **Testimonials:** Real customer reviews lend credibility and showcase the company’s commitment to service.
 * **About us:** Information about the owner and team, service areas and the company’s commitment to excellence.
 * **Contact form:** A simple mail‑to form for visitors to request quotes or inspections, along with a prominent phone number.  Submitted forms open the user’s email client for quick communication.
