@@ -18,10 +18,10 @@ body {
 header {
   background-color: #0a3d62;
   color: #ffffff;
-  /* Reduce the vertical padding so the header feels lighter and allows the logo to sit comfortably without dominating the top of the page. */
-  padding: 0.5rem 2rem;
+  /* Further reduce the vertical padding and remove space‑between so the logo doesn’t sit all the way at the far left.  
+     We’ll push the navigation to the right using margin‑left:auto on the nav so the logo and menu flow together naturally. */
+  padding: 0.4rem 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -36,6 +36,11 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+/* Push the navigation to the right while keeping the logo on the left. */
+nav {
+  margin-left: auto;
 }
 nav a {
   color: #ffffff;
@@ -205,9 +210,11 @@ footer {
  * remains the same to separate it from the navigation links.
  */
 .logo {
-  height: 40px;
+  /* Reduce the logo height further so it integrates with the header and nav without overwhelming them.  
+     The auto width maintains the aspect ratio, and a small right margin gives breathing room before the navigation. */
+  height: 32px;
   width: auto;
-  margin-right: 0.75rem;
+  margin-right: 0.6rem;
 }
 
 /* Visually hide text while keeping it accessible to screen readers */
