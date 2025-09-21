@@ -11,6 +11,7 @@ Veterans Pest Control is a veteran‑owned business providing residential, comme
 * **Expanded services overview:** A grid of service categories covering general pest control, bed bug elimination, termite treatments, mosquito & tick control, rodent & wildlife management and commercial/industrial programs.
 * **Why choose us:** A section outlining the company’s differentiators—veteran values, licensing and insurance, experience, IPM methodology, eco‑friendly options, satisfaction guarantee and 24/7 response.
 * **Our approach:** A breakdown of the integrated pest management process (inspect & identify, customize a plan, treat & protect, follow up) that informs customers about what to expect.
+* **Identify pests section:** A library of common pests—such as ants, bed bugs, cockroaches, mosquitoes, rodents, termites, spiders and wasps—with descriptions to help visitors recognize the signs of an infestation and know when to call for professional help.
 * **About us:** Information about the owner and team, service areas and the company’s commitment to excellence.
 * **Contact form:** A form for visitors to request quotes or inspections, along with a prominent phone number.
 
