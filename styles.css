@@ -242,6 +242,19 @@ footer {
   min-height: 140px;
   resize: vertical;
 }
+.quote-form select {
+  padding: 0.6rem;
+  border: 1px solid #ccd5db;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #ffffff;
+}
+
+/* Light gray text for placeholder option */
+.quote-form select option[value=""] {
+  color: #888;
+}
 .quote-form .cta-button {
   flex-basis: 100%;
   margin-top: 0.5rem;
