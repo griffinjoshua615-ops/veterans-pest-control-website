@@ -81,10 +81,16 @@ nav a:hover {
 }
 
 /* Buttons */
+/*
+ * Call‑to‑action buttons use the gold accent from the updated logo. The base
+ * colour (#FFA41B) is a warm golden tone and the hover state darkens it
+ * slightly to provide feedback. This palette ties the site together with
+ * the new vector logo while remaining accessible.
+ */
 .cta-button {
   display: inline-block;
   padding: 0.8rem 1.4rem;
-  background-color: #f39c12;
+  background-color: #ffa41b;
   color: #ffffff;
   border-radius: 4px;
   text-decoration: none;
@@ -93,7 +99,7 @@ nav a:hover {
   transition: background-color 0.2s ease;
 }
 .cta-button:hover {
-  background-color: #d78a0c;
+  background-color: #e69500;
 }
 
 /* Main content sections */
@@ -179,6 +185,13 @@ footer {
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+/* Logo styling */
+.logo {
+  height: 60px;
+  width: auto;
+  margin-right: 0.75rem;
 }
 
 /* Responsive adjustments */
