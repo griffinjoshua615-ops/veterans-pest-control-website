@@ -30,16 +30,31 @@
   </section>
 
   <section class="container">
-    <div class="contact-form" style="background-color:#f7f7f7; border-radius:6px; box-shadow:0 2px 4px rgba(0,0,0,0.05); max-width:960px; margin:auto; padding:2rem 1rem;">
+    <div class="contact-form">
       <h3>Get a Free Quote</h3>
-      <p>Call us at <strong>(334) 578‑2844</strong> or fill out the form below and we’ll get back to you promptly.</p>
-      <!-- Use a mailto form so inquiries are sent directly to the business email -->
-      <form action="mailto:veteranspestcontrolllc@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <input type="tel" name="Phone" placeholder="Phone Number" required>
-        <input type="text" name="Subject" placeholder="Subject">
-        <textarea name="Message" placeholder="How can we help?" rows="5" required></textarea>
+      <p>Call us at <strong>(334) 578‑2844</strong> or complete the form below and one of our licensed technicians will reach out promptly.</p>
+      <!-- Structured quote form with labels for a professional look -->
+      <form action="mailto:veteranspestcontrolllc@gmail.com" method="post" enctype="text/plain" class="quote-form">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="Name" placeholder="Your Name" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="Email" placeholder="Your Email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input id="phone" type="tel" name="Phone" placeholder="Phone Number" required>
+        </div>
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input id="subject" type="text" name="Subject" placeholder="Subject">
+        </div>
+        <div class="form-row" style="flex:1 1 100%;">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" placeholder="How can we help?" rows="5" required></textarea>
+        </div>
         <button type="submit" class="cta-button">Send Message</button>
       </form>
     </div>
