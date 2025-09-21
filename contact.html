@@ -31,16 +31,17 @@
 
   <section class="container">
     <div class="contact-form">
-      <h3>Get a Free Quote</h3>
-      <p>Call us at <strong>(334) 578‑2844</strong> or complete the form below and one of our licensed technicians will reach out promptly.</p>
-      <!-- Structured quote form with labels for a professional look -->
+      <h3>Tell Us About Your Pest Control Needs</h3>
+      <p>Call us at <strong>(334) 578‑2844</strong> or complete the form below to receive a free estimate. One of our licensed technicians will follow up promptly.</p>
+      <p style="color:#d78a0c;font-weight:bold;margin-top:-0.5rem;margin-bottom:1rem;">First‑time customers: ask about our current specials!</p>
+      <!-- Enhanced quote form with dropdowns for service type and customer type -->
       <form action="mailto:veteranspestcontrolllc@gmail.com" method="post" enctype="text/plain" class="quote-form">
         <div class="form-row">
-          <label for="name">Name</label>
-          <input id="name" type="text" name="Name" placeholder="Your Name" required>
+          <label for="fullName">Full Name</label>
+          <input id="fullName" type="text" name="Name" placeholder="Your Name" required>
         </div>
         <div class="form-row">
-          <label for="email">Email</label>
+          <label for="email">Email Address</label>
           <input id="email" type="email" name="Email" placeholder="Your Email" required>
         </div>
         <div class="form-row">
@@ -48,14 +49,33 @@
           <input id="phone" type="tel" name="Phone" placeholder="Phone Number" required>
         </div>
         <div class="form-row">
-          <label for="subject">Subject</label>
-          <input id="subject" type="text" name="Subject" placeholder="Subject">
+          <label for="customerType">Commercial or Residential?</label>
+          <select id="customerType" name="Customer Type" required>
+            <option value="" disabled selected>Select one...</option>
+            <option value="Residential">Residential</option>
+            <option value="Commercial">Commercial</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="serviceType">Type of Service</label>
+          <select id="serviceType" name="Service Type" required>
+            <option value="" disabled selected>Select a pest or service...</option>
+            <option value="Ants">Ants</option>
+            <option value="Bed Bugs">Bed Bugs</option>
+            <option value="Cockroaches">Cockroaches</option>
+            <option value="Mosquitoes">Mosquitoes</option>
+            <option value="Rodents">Rodents</option>
+            <option value="Termites">Termites</option>
+            <option value="Spiders">Spiders</option>
+            <option value="Wasps & Hornets">Wasps & Hornets</option>
+            <option value="Other">Other / General Pest Control</option>
+          </select>
         </div>
         <div class="form-row" style="flex:1 1 100%;">
-          <label for="message">Message</label>
-          <textarea id="message" name="Message" placeholder="How can we help?" rows="5" required></textarea>
+          <label for="problem">Describe Your Problem</label>
+          <textarea id="problem" name="Message" placeholder="Tell us about your pest issue..." rows="5" required></textarea>
         </div>
-        <button type="submit" class="cta-button">Send Message</button>
+        <button type="submit" class="cta-button">Send Request</button>
       </form>
     </div>
   </section>
