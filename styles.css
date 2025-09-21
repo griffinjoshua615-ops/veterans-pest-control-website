@@ -18,7 +18,8 @@ body {
 header {
   background-color: #0a3d62;
   color: #ffffff;
-  padding: 1rem 2rem;
+  /* Reduce the vertical padding so the header feels lighter and allows the logo to sit comfortably without dominating the top of the page. */
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,8 +198,14 @@ footer {
  * preserve the aspect ratio, and the right margin keeps spacing from the
  * company name.
  */
+/*
+ * The logo height is further reduced to 40px so it integrates seamlessly with
+ * the header and navigation. A smaller logo helps maintain visual balance,
+ * especially on smaller screens, while preserving clarity. The right margin
+ * remains the same to separate it from the navigation links.
+ */
 .logo {
-  height: 48px;
+  height: 40px;
   width: auto;
   margin-right: 0.75rem;
 }
