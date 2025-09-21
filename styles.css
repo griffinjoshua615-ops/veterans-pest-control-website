@@ -193,6 +193,16 @@ footer {
   margin-top: 2rem;
 }
 
+/* Footer logo styling
+   A small version of the logo appears in the footer to reinforce brand identity.
+   The height is kept modest so it doesn’t dominate the footer, and a bottom
+   margin ensures separation from the copyright text. */
+.footer-logo {
+  height: 28px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
 /* Logo styling */
 /*
  * Logo dimensions
