@@ -222,7 +222,7 @@ footer {
 .logo {
   /* Reduce the logo height further so it integrates with the header and nav without overwhelming them.  
      The auto width maintains the aspect ratio, and a small right margin gives breathing room before the navigation. */
-  height: 32px;
+  height: 48px;
   width: auto;
   margin-right: 0.6rem;
 }
