@@ -188,10 +188,32 @@ footer {
 }
 
 /* Logo styling */
+/*
+ * Logo dimensions
+ *
+ * The updated logo is more detailed than the previous version, so we slightly
+ * reduce its height to 50px to ensure it fits harmoniously within the
+ * header and doesn’t overwhelm the navigation. The width remains auto to
+ * preserve the aspect ratio, and the right margin keeps spacing from the
+ * company name.
+ */
 .logo {
-  height: 60px;
+  height: 48px;
   width: auto;
   margin-right: 0.75rem;
+}
+
+/* Visually hide text while keeping it accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Responsive adjustments */
