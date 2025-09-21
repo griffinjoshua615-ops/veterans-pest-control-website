@@ -5,59 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Veterans Pest Control LLC</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; }
-    header { background-color: #0a3d62; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { margin: 0; font-size: 1.5rem; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    .hero {
-      background-image: url('hero.jpg');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-align: center;
-      padding: 5rem 1rem;
-      position: relative;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
-    .cta-button {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: #f39c12;
-      color: #fff;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section { padding: 2rem 1.5rem; }
-    .about, .services { max-width: 960px; margin: auto; }
-    .services-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .service-card { flex: 1 1 calc(33.333% - 1rem); background-color: #f7f7f7; padding: 1rem; border-radius: 4px; }
-    .service-card h3 { margin-top: 0; }
-    footer { background-color: #0a3d62; color: #fff; text-align: center; padding: 1rem; }
-    @media (max-width: 768px) {
-      .service-card { flex-basis: 100%; }
-      .hero h2 { font-size: 2rem; }
-    }
-  </style>
+  <!-- Link to shared stylesheet for consistent look and feel across all pages -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <h1>Veterans Pest Control LLC</h1>
     <nav>
       <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="identify.html">Identify Pests</a></li>
         <li><a href="why.html">Why Choose Us</a></li>
@@ -67,31 +23,25 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" style="background-image:url('hero.jpg');">
     <div class="hero-content">
-      <!--
-        Update the hero message to emphasise that the business is proudly based in Alabama.
-        This clarifies the company's home state while still noting service in neighbouring Georgia.
-      -->
-      <!--
-        Adjusted hero message to clearly state that the company is based in Alabama.  
-        The header now reads "Based in Alabama" to emphasise the company’s home state, 
-        while the supporting text clarifies that we also serve nearby parts of Georgia.
-      -->
       <h2>Veteran‑Owned Pest Control Based in Alabama</h2>
-      <p>Trusted, licensed pest control for your home and business. We’re proudly based in Alabama and serve residential and commercial customers across the state – from the Gulf Coast up to the Tennessee line – as well as neighbouring parts of Georgia.</p>
-      <a href="#contact" class="cta-button">Get a Free Quote</a>
+      <p>Trusted, licensed pest control for your home and business. We’re proudly based in Alabama and serve customers throughout the state and neighbouring parts of Georgia.</p>
+      <a href="contact.html" class="cta-button">Get a Free Quote</a>
     </div>
   </section>
 
-  <section style="padding: 2rem 1.5rem; text-align:center;">
+  <section class="container" style="text-align:center;">
     <h2>Protect Your Home & Business</h2>
-    <p>Veterans Pest Control offers comprehensive pest management services for residential, commercial and industrial properties. Explore our services, learn how to identify pests and discover why customers across Alabama trust us to keep their spaces pest‑free.</p>
-    <p><a href="services.html" class="cta-button" style="margin-right:0.5rem;">See Our Services</a><a href="identify.html" class="cta-button">Identify Pests</a></p>
+    <p>We offer comprehensive pest management programs tailored for residential, commercial and industrial customers. Explore our services, learn how to recognise pests and discover why Alabama chooses us.</p>
+    <p>
+      <a href="services.html" class="cta-button">View Services</a>
+      <a href="identify.html" class="cta-button">Identify Pests</a>
+    </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Veterans Pest Control, LLC. All rights reserved.</p>
+    <p>&copy; 2025 Veterans Pest Control, LLC. All rights reserved.</p>
   </footer>
 </body>
 </html>

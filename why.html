@@ -5,19 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Why Choose Us | Veterans Pest Control</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; }
-    header { background-color: #0a3d62; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { margin: 0; font-size: 1.5rem; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    .hero { background-color: #0a3d62; color: #fff; padding: 3rem 1rem; text-align: center; }
-    .hero h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
-    section { padding: 2rem 1.5rem; }
-    footer { background-color: #0a3d62; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-    @media (max-width: 768px) { .hero h2 { font-size: 2rem; } }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -34,14 +22,16 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Why Choose Us</h2>
-    <p>Discover what sets Veterans Pest Control apart and why customers trust us to protect their homes and businesses.</p>
+  <section class="hero" style="background-color:#0a3d62;">
+    <div class="hero-content">
+      <h2>Why Choose Us</h2>
+      <p>Discover what sets Veterans Pest Control apart and why customers trust us to protect their homes and businesses.</p>
+    </div>
   </section>
 
-  <section>
+  <section class="container">
     <h3>Our Promise</h3>
-    <ul style="max-width: 960px; margin: auto; list-style: disc; padding-left: 1.25rem; line-height: 1.6;">
+    <ul style="list-style: disc; padding-left: 1.25rem; line-height: 1.6; max-width: 960px; margin:auto;">
       <li><strong>Veteran‑owned & operated:</strong> Our business is founded on military values of service and integrity.</li>
       <li><strong>Licensed & insured in AL & GA:</strong> We hold structural pest control licenses in Alabama and Georgia and carry full insurance for your protection.</li>
       <li><strong>17+ years of experience:</strong> Owner Eddie Bennett and our team are industry veterans who stay current with the latest pest management techniques.</li>
@@ -52,31 +42,48 @@
     </ul>
   </section>
 
-  <section style="background-color: #f7f7f7;">
+  <section class="container" style="background-color:#f7f7f7;">
     <h3 style="padding-top:1rem;">Our Approach</h3>
-    <p style="max-width: 960px; margin: auto;">We believe that eliminating pests requires more than just spraying chemicals. Our Integrated Pest Management (IPM) methodology follows a proven process:</p>
+    <p style="max-width: 960px; margin: auto;">Eliminating pests requires more than just spraying chemicals. Our Integrated Pest Management (IPM) methodology follows a proven process:</p>
     <div style="max-width: 960px; margin: auto; display: flex; flex-wrap: wrap; gap: 1rem; padding-bottom:2rem;">
-      <div style="flex: 1 1 45%; background-color: #fff; padding: 1rem; border-radius: 4px;">
+      <div style="flex: 1 1 45%; background-color: #ffffff; padding: 1rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
         <h4>Inspect & Identify</h4>
         <p>We conduct a thorough inspection of your property to identify pest species, harborage areas and contributing conditions.</p>
       </div>
-      <div style="flex: 1 1 45%; background-color: #fff; padding: 1rem; border-radius: 4px;">
+      <div style="flex: 1 1 45%; background-color: #ffffff; padding: 1rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
         <h4>Customize a Plan</h4>
         <p>Based on our findings, we design a treatment plan using targeted products, exclusion techniques and sanitation recommendations.</p>
       </div>
-      <div style="flex: 1 1 45%; background-color: #fff; padding: 1rem; border-radius: 4px;">
+      <div style="flex: 1 1 45%; background-color: #ffffff; padding: 1rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
         <h4>Treat & Protect</h4>
         <p>Our licensed technicians apply treatments safely and effectively, monitor results and adjust as needed to ensure long‑term control.</p>
       </div>
-      <div style="flex: 1 1 45%; background-color: #fff; padding: 1rem; border-radius: 4px;">
+      <div style="flex: 1 1 45%; background-color: #ffffff; padding: 1rem; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
         <h4>Follow Up</h4>
         <p>After the initial service, we schedule follow‑up visits and provide recommendations to prevent future infestations.</p>
       </div>
     </div>
   </section>
 
+  <!-- Testimonials -->
+  <section class="container testimonials">
+    <h3>What Our Customers Say</h3>
+    <div class="testimonial">
+      <p>“Eddie and his team were professional, punctual and explained everything clearly. We haven’t seen a single pest since their visit!”</p>
+      <p class="author">– Sarah T., Mobile</p>
+    </div>
+    <div class="testimonial">
+      <p>“Veterans Pest Control gave us peace of mind during a stressful termite issue. Their service was thorough and fairly priced.”</p>
+      <p class="author">– Jamal R., Montgomery</p>
+    </div>
+    <div class="testimonial">
+      <p>“We switched from a national company and couldn’t be happier. Supporting a veteran‑owned business with such excellent service was a no‑brainer.”</p>
+      <p class="author">– Lisa & Tom B., Huntsville</p>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Veterans Pest Control, LLC. All rights reserved.</p>
+    <p>&copy; 2025 Veterans Pest Control, LLC. All rights reserved.</p>
   </footer>
 </body>
 </html>

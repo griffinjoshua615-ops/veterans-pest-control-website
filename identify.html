@@ -5,26 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Identify Pests | Veterans Pest Control</title>
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; }
-    header { background-color: #0a3d62; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-    header h1 { margin: 0; font-size: 1.5rem; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; }
-    nav a { color: #fff; text-decoration: none; font-weight: bold; }
-    .hero { background-color: #0a3d62; color: #fff; padding: 3rem 1rem; text-align: center; }
-    .hero h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
-    section { padding: 2rem 1.5rem; }
-    .services-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .service-card { flex: 1 1 calc(25% - 1rem); background-color: #f7f7f7; padding: 1rem; border-radius: 4px; text-align: center; }
-    .service-card h3 { margin-top: 0.5rem; }
-    .service-card img { border-radius: 4px; }
-    footer { background-color: #0a3d62; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
-    @media (max-width: 768px) {
-      .service-card { flex-basis: 100%; }
-      .hero h2 { font-size: 2rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -41,58 +22,60 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Identify Common Pests</h2>
-    <p>Use our quick reference guide to recognize the pests most commonly found in Alabama homes and businesses.</p>
+  <section class="hero" style="background-color:#0a3d62;">
+    <div class="hero-content">
+      <h2>Identify Common Pests</h2>
+      <p>Use our quick reference guide to recognise the pests most commonly found in Alabama homes and businesses.</p>
+    </div>
   </section>
 
-  <section>
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="ant_photo.png" alt="Ant" style="width:80px;height:80px;">
-        <h3>Ants</h3>
-        <p>Small insects with segmented bodies and elbowed antennae. Look for long trails leading to food, soil mounds around foundations or wood shavings from carpenter ants.</p>
+  <section class="container">
+    <div class="pest-gallery">
+      <div class="pest-card">
+        <img src="ant_photo.png" alt="Ants">
+        <h4>Ants</h4>
+        <p>Small insects with segmented bodies and elbowed antennae. Look for long trails to food, soil mounds around foundations or wood shavings from carpenter ants.</p>
       </div>
-      <div class="service-card">
-        <img src="bedbug_photo.png" alt="Bed Bug" style="width:80px;height:80px;">
-        <h3>Bed Bugs</h3>
-        <p>Tiny, flat, reddish‑brown insects that hide in seams of mattresses and furniture. Signs include itchy welts, dark spots or shed skins on bedding and nearby crevices.</p>
+      <div class="pest-card">
+        <img src="bedbug_photo.png" alt="Bed Bugs">
+        <h4>Bed Bugs</h4>
+        <p>Tiny, flat, reddish‑brown insects hiding in seams of mattresses and furniture. Signs include itchy welts, dark spots or shed skins on bedding and crevices.</p>
       </div>
-      <div class="service-card">
-        <img src="cockroach_photo.png" alt="Cockroach" style="width:80px;height:80px;">
-        <h3>Cockroaches</h3>
-        <p>Flattened, fast‑moving insects that prefer dark, damp areas. You may notice egg cases, pepper‑like droppings, a musty odor or sightings when you switch on the lights.</p>
+      <div class="pest-card">
+        <img src="cockroach_photo.png" alt="Cockroaches">
+        <h4>Cockroaches</h4>
+        <p>Flattened, fast‑moving insects that prefer dark, damp areas. You may notice egg cases, pepper‑like droppings, a musty odour or sightings when you switch on the lights.</p>
       </div>
-      <div class="service-card">
-        <img src="mosquito_photo.png" alt="Mosquito" style="width:80px;height:80px;">
-        <h3>Mosquitoes</h3>
+      <div class="pest-card">
+        <img src="mosquito_photo.png" alt="Mosquitoes">
+        <h4>Mosquitoes</h4>
         <p>Slender flying insects that bite to feed on blood. Standing water, clogged gutters and dense vegetation provide breeding sites for these disease carriers.</p>
       </div>
-      <div class="service-card">
-        <img src="rat_photo.png" alt="Rodent" style="width:80px;height:80px;">
-        <h3>Rodents</h3>
-        <p>Mice and rats leave gnaw marks, droppings and greasy rub marks along walls. Listen for scratching noises in walls or attics, and look for nests made of shredded materials.</p>
+      <div class="pest-card">
+        <img src="rat_photo.png" alt="Rodents">
+        <h4>Rodents</h4>
+        <p>Mice and rats leave gnaw marks, droppings and greasy rub marks along walls. Listen for scratching noises in walls or attics, and look for nests of shredded materials.</p>
       </div>
-      <div class="service-card">
-        <img src="termite_photo.png" alt="Termite" style="width:80px;height:80px;">
-        <h3>Termites</h3>
+      <div class="pest-card">
+        <img src="termite_photo.png" alt="Termites">
+        <h4>Termites</h4>
         <p>Wood‑eating insects that live in colonies. Watch for mud tubes on foundations, hollow‑sounding wood or swarming winged termites emerging indoors.</p>
       </div>
-      <div class="service-card">
-        <img src="spider_photo.png" alt="Spider" style="width:80px;height:80px;">
-        <h3>Spiders</h3>
-        <p>Eight‑legged arachnids that build webs or hunt on foot. While many are beneficial, venomous species like black widows have distinctive markings and prefer secluded areas.</p>
+      <div class="pest-card">
+        <img src="spider_photo.png" alt="Spiders">
+        <h4>Spiders</h4>
+        <p>Eight‑legged arachnids that build webs or hunt on foot. Beneficial in low numbers, but venomous species like black widows prefer secluded areas.</p>
       </div>
-      <div class="service-card">
-        <img src="wasp_photo.png" alt="Wasp/Hornet" style="width:80px;height:80px;">
-        <h3>Wasps & Hornets</h3>
-        <p>Stinging insects that build papery nests under eaves, in trees or in the ground. They can be aggressive if disturbed, so it’s best to leave removal to professionals.</p>
+      <div class="pest-card">
+        <img src="wasp_photo.png" alt="Wasps and Hornets">
+        <h4>Wasps & Hornets</h4>
+        <p>Stinging insects that build papery nests under eaves, in trees or in the ground. They can be aggressive if disturbed—leave removal to professionals.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Veterans Pest Control, LLC. All rights reserved.</p>
+    <p>&copy; 2025 Veterans Pest Control, LLC. All rights reserved.</p>
   </footer>
 </body>
 </html>
