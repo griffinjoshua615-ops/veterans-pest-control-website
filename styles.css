@@ -200,3 +200,56 @@ footer {
     font-size: 2rem;
   }
 }
+
+/* Contact form styling */
+.contact-form {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 2rem 1.5rem;
+}
+.contact-form h3 {
+  margin-top: 0;
+  color: #0a3d62;
+}
+
+/* Quote form layout */
+.quote-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.quote-form .form-row {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(50% - 1rem);
+}
+.quote-form .form-row label {
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: #0a3d62;
+}
+.quote-form input,
+.quote-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccd5db;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.quote-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.quote-form .cta-button {
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+@media (max-width: 600px) {
+  .quote-form .form-row {
+    flex: 1 1 100%;
+  }
+}
