@@ -1,236 +1,662 @@
 /*
  * Global stylesheet for Veterans Pest Control website.
- * This file defines the common color palette, typography and layout rules
- * used across all pages. By consolidating styles in one place it’s
- * easier to maintain consistency and make future design refinements.
+ * Modernized for a more premium, trust-driven local service brand.
  */
 
-/* Base styles */
+:root {
+  --navy: #0b2340;
+  --navy-deep: #081d32;
+  --forest: #173d2c;
+  --gold: #f5a623;
+  --gold-deep: #d98d0e;
+  --sand: #f7f3ea;
+  --cream: #f9f9f7;
+  --white: #ffffff;
+  --ink: #1d2a36;
+  --muted: #5a6976;
+  --line: #dfe6eb;
+  --success: #eaf6ef;
+  --shadow: 0 18px 38px rgba(12, 31, 45, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background: var(--cream);
+  color: var(--ink);
 }
 
-/* Header and navigation */
-header {
-  background-color: #0a3d62;
-  color: #ffffff;
-  /* Further reduce the vertical padding and remove space‑between so the logo doesn’t sit all the way at the far left.  
-     We’ll push the navigation to the right using margin‑left:auto on the nav so the logo and menu flow together naturally. */
-  padding: 0.4rem 1.5rem;
-  display: 80;
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1140px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: rgba(11, 35, 64, 0.98);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.12);
+}
+
+.nav-wrap {
+  display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 0.6rem 0;
 }
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
 }
+
+.logo {
+  height: 84px;
+  width: auto;
+}
+
+nav {
+  margin-left: auto;
+}
+
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.35rem;
 }
 
-/* Push the navigation to the right while keeping the logo on the left. */
-nav {
-  margin-left: auto;
-}
 nav a {
-  color: #ffffff;
+  display: inline-block;
+  padding: 0.7rem 0.9rem;
+  color: var(--white);
   text-decoration: none;
   font-weight: 600;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Hero sections */
+nav a:hover,
+nav a:focus-visible {
+  background: rgba(255,255,255,0.12);
+}
+
 .hero {
+  position: relative;
   background-size: cover;
   background-position: center;
-  color: #ffffff;
-  text-align: center;
-  padding: 4rem 1rem;
-  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
-.hero::after {
-  content: "";
+
+.hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.45);
+  inset: 0;
+  background: linear-gradient(90deg, rgba(7, 24, 38, 0.88), rgba(7, 24, 38, 0.7));
 }
+
 .hero-content {
   position: relative;
   z-index: 1;
-}
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-.hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0.5rem auto 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 5rem 0;
 }
 
-/* Buttons */
-/*
- * Call‑to‑action buttons use the gold accent from the updated logo. The base
- * colour (#FFA41B) is a warm golden tone and the hover state darkens it
- * slightly to provide feedback. This palette ties the site together with
- * the new vector logo while remaining accessible.
- */
-.cta-button {
+.hero-copy {
+  max-width: 760px;
+}
+
+.eyebrow {
   display: inline-block;
-  padding: 0.8rem 1.4rem;
-  background-color: #ffa41b;
-  color: #ffffff;
-  border-radius: 4px;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.eyebrow.dark {
+  color: var(--forest);
+}
+
+.hero h1 {
+  margin: 0.75rem 0 1rem;
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  color: var(--white);
+}
+
+.hero p {
+  margin: 0;
+  color: rgba(255,255,255,0.86);
+  font-size: clamp(1.04rem, 1.6vw, 1.22rem);
+  max-width: 640px;
+}
+
+.hero-actions {
+  margin-top: 1.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 700;
   text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.cta-button.primary {
+  background: var(--gold);
+  color: var(--white);
+  box-shadow: 0 10px 22px rgba(245, 166, 35, 0.35);
+}
+
+.cta-button.primary:hover,
+.cta-button.primary:focus-visible {
+  background: var(--gold-deep);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.55);
+}
+
+.cta-button.secondary:hover,
+.cta-button.secondary:focus-visible {
+  background: rgba(255,255,255,0.08);
+}
+
+.cta-button.secondary.dark {
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+.trust-points {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: rgba(255,255,255,0.8);
   font-weight: 600;
-  margin: 0.25rem;
-  transition: background-color 0.2s ease;
-}
-.cta-button:hover {
-  background-color: #e69500;
 }
 
-/* Main content sections */
-section {
-  padding: 2rem 1.5rem;
-}
-.container {
-  max-width: 1100px;
-  margin: auto;
+.trust-points li {
+  position: relative;
+  padding-left: 1.2rem;
 }
 
-/* Service cards grid */
-.services-grid {
+.trust-points li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.stat-box {
+  border-radius: 18px;
+  background: rgba(255,255,255,0.94);
+  color: var(--navy);
+  padding: 1.2rem 1rem;
+  margin-bottom: 0.9rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.service-card {
-  flex: 1 1 calc(33.333% - 1rem);
-  background-color: #ffffff;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-.service-card h3 {
-  margin-top: 0;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
-/* Pest gallery */
-.pest-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.pest-card {
-  flex: 1 1 calc(25% - 1rem);
-  background-color: #ffffff;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  text-align: center;
-}
-.pest-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-.pest-card h4 {
-  margin: 0.75rem 0 0.5rem;
-  font-size: 1.1rem;
-}
-.pest-card p {
-  padding: 0 0.75rem 1rem;
-  font-size: 0.9rem;
-}
-
-/* Testimonials */
-.testimonials {
-  background-color: #ffffff;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-}
-.testimonial {
-  margin-bottom: 1.5rem;
-}
-.testimonial:last-child {
+.stat-box:last-child {
   margin-bottom: 0;
 }
-.testimonial p {
-  font-style: italic;
-  margin: 0 0 0.5rem;
-}
-.testimonial .author {
-  font-weight: bold;
-  color: #0a3d62;
+
+.stat-box.green {
+  background: #ebf7f0;
 }
 
-/* Footer */
-footer {
-  background-color: #0a3d62;
-  color: #ffffff;
+.stat-value {
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.intro-band {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.split-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.split-intro h2,
+.section-heading h2,
+.feature-copy h2,
+.contact-strip h2 {
+  margin: 0.6rem 0 0;
+  color: var(--navy-deep);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.split-intro h2,
+.section-heading h2,
+.feature-copy h2,
+.contact-strip h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.split-intro p,
+.feature-copy p,
+.feature-list,
+.service-card p,
+.pest-card p,
+.testimonial p,
+.contact-strip p {
+  color: var(--muted);
+}
+
+.section-pad {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.section-heading.center {
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
 }
 
-/* Footer logo styling
-   A small version of the logo appears in the footer to reinforce brand identity.
-   The height is kept modest so it doesn’t dominate the footer, and a bottom
-   margin ensures separation from the copyright text. */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.5rem 1.2rem;
+  box-shadow: 0 8px 18px rgba(12, 31, 45, 0.04);
+}
+
+.icon-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(245,166,35,0.17), rgba(23,61,44,0.08));
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.25rem;
+  color: var(--navy-deep);
+}
+
+.service-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.section-alt {
+  background: linear-gradient(180deg, #f2f6f1 0%, #f8f8f5 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 4.25rem 0;
+}
+
+.pest-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pest-card {
+  background: var(--white);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(12, 31, 45, 0.04);
+}
+
+.pest-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.pest-card h4 {
+  margin: 0.9rem 0 0.45rem;
+  padding: 0 1rem;
+  color: var(--navy-deep);
+  font-size: 1.1rem;
+}
+
+.pest-card p {
+  margin: 0;
+  padding: 0 1rem 1.1rem;
+  line-height: 1.65;
+}
+
+.split-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.feature-copy {
+  max-width: 620px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 1.7rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1.3rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--forest);
+  font-weight: 900;
+}
+
+.feature-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.mini-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.3rem 1.2rem;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 0.3rem;
+}
+
+.mini-card strong {
+  color: var(--navy-deep);
+  font-size: 1.15rem;
+}
+
+.mini-card span {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.mini-card.highlight {
+  background: linear-gradient(135deg, rgba(17,77,60,0.08), rgba(245,166,35,0.1));
+}
+
+.testimonials {
+  background: transparent;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.testimonial {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  margin: 0;
+  padding: 1.5rem;
+  box-shadow: 0 8px 18px rgba(12,31,45,0.04);
+}
+
+.testimonial p {
+  margin: 0 0 0.8rem;
+  color: var(--ink);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.testimonial footer {
+  font-weight: 700;
+  color: var(--navy-deep);
+}
+
+.contact-strip {
+  background: linear-gradient(90deg, #f6f1e6 0%, #eef7f2 100%);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 2.2rem 0;
+}
+
+.contact-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+footer {
+  background: var(--navy-deep);
+  color: var(--white);
+  padding: 1.3rem 0 2rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+}
+
 .footer-logo {
-  height: 28px;
+  height: 58px;
   width: auto;
-  margin-bottom: 0.5rem;
 }
 
-/* Logo styling */
-/*
- * Logo dimensions
- *
- * The updated logo is more detailed than the previous version, so we slightly
- * reduce its height to 50px to ensure it fits harmoniously within the
- * header and doesn’t overwhelm the navigation. The width remains auto to
- * preserve the aspect ratio, and the right margin keeps spacing from the
- * company name.
- */
-/*
- * The logo height is further reduced to 40px so it integrates seamlessly with
- * the header and navigation. A smaller logo helps maintain visual balance,
- * especially on smaller screens, while preserving clarity. The right margin
- * remains the same to separate it from the navigation links.
- */
-.logo {
-  /* Further increase the logo height a bit to improve visibility without
-     overwhelming the navigation. Keeping the width auto preserves the aspect ratio.
-     A small right margin maintains spacing between the logo and the navigation links. */
-  /* Increase the logo height slightly again so the character and text are
-     easily readable while still maintaining balance with the navigation. */
-  
-  height: 120px;;
-  margin-right: 0.6rem;
+@media (max-width: 960px) {
+  .hero-content,
+  .split-intro,
+  .split-feature,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pest-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-/* Visually hide text while keeping it accessible to screen readers */
+@media (max-width: 700px) {
+  .nav-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.9rem 0;
+  }
+
+  nav {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  nav ul {
+    gap: 0.25rem;
+    justify-content: flex-start;
+  }
+
+  nav a {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.92rem;
+  }
+
+  .hero-content {
+    padding: 4rem 0 3rem;
+  }
+
+  .split-intro,
+  .contact-strip-inner {
+    display: block;
+  }
+
+  .services-grid,
+  .pest-gallery,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-strip {
+    padding: 1.8rem 0;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  .hero-actions,
+  .contact-actions {
+    display: grid;
+  }
+}
+
+/* Existing page-specific layout helpers */
+section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.contact-form,
+.quote-form {
+  max-width: 100%;
+}
+
+.quote-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.quote-form .form-row {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 calc(50% - 1rem);
+}
+
+.quote-form label {
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+  color: var(--navy-deep);
+}
+
+.quote-form input,
+.quote-form textarea,
+.quote-form select {
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font: inherit;
+  background: var(--white);
+}
+
+.quote-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.quote-form .cta-button {
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  width: fit-content;
+}
+
+@media (max-width: 600px) {
+  .quote-form .form-row {
+    flex: 1 1 100%;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -243,88 +669,82 @@ footer {
   border: 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .service-card,
-  .pest-card {
-    flex: 1 1 calc(50% - 1rem);
-  }
+.footer-logo {
+  height: 58px;
+  width: auto;
 }
-@media (max-width: 600px) {
-  nav ul {
-    gap: 0.5rem;
-  }
-  .service-card,
-  .pest-card {
-    flex: 1 1 100%;
-  }
-  .hero h2 {
-    font-size: 2rem;
+
+.logo {
+  height: 84px;
+  margin-right: 0.6rem;
+}
+
+@media (max-width: 520px) {
+  .logo {
+    height: 68px;
   }
 }
 
-/* Contact form styling */
-.contact-form {
-  background-color: #ffffff;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  padding: 2rem 1.5rem;
-}
-.contact-form h3 {
-  margin-top: 0;
-  color: #0a3d62;
+body {
+  min-height: 100vh;
 }
 
-/* Quote form layout */
-.quote-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.quote-form .form-row {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 calc(50% - 1rem);
-}
-.quote-form .form-row label {
-  margin-bottom: 0.35rem;
-  font-weight: 600;
-  color: #0a3d62;
-}
-.quote-form input,
-.quote-form textarea {
-  padding: 0.6rem;
-  border: 1px solid #ccd5db;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: inherit;
-}
-.quote-form textarea {
-  min-height: 140px;
-  resize: vertical;
-}
-.quote-form select {
-  padding: 0.6rem;
-  border: 1px solid #ccd5db;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: inherit;
-  background-color: #ffffff;
+p, li, h1, h2, h3, h4 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Light gray text for placeholder option */
-.quote-form select option[value=""] {
-  color: #888;
-}
-.quote-form .cta-button {
-  flex-basis: 100%;
-  margin-top: 0.5rem;
-  width: fit-content;
+main {
+  display: block;
 }
 
-@media (max-width: 600px) {
-  .quote-form .form-row {
-    flex: 1 1 100%;
+.contact-strip h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.contact-strip .eyebrow {
+  color: var(--forest);
+}
+
+.hero .eyebrow {
+  color: #f7c86a;
+}
+
+.hero .cta-button.primary {
+  background: var(--gold);
+}
+
+.hero .cta-button.primary:hover {
+  background: var(--gold-deep);
+}
+
+.hero-card .stat-box {
+  box-shadow: inset 0 0 0 1px rgba(11,35,64,0.06);
+}
+
+.hero-card .stat-box.green {
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(15,118,110,0.02));
+}
+
+.service-card:hover {
+  box-shadow: 0 16px 26px rgba(12, 31, 45, 0.08);
+  border-color: rgba(11,35,64,0.15);
+}
+
+.pest-card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
+
+header, nav, a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
