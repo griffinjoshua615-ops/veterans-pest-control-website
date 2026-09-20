@@ -8,10 +8,16 @@
   <meta property="og:title" content="Veterans Pest Control LLC | Veteran-Owned Pest Control">
   <meta property="og:description" content="Experienced pest control for homes and businesses across Alabama and Georgia.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://veteranspestcontrolllc.com/">
+  <meta property="og:image" content="https://griffinjoshua615-ops.github.io/veterans-pest-control-website/logo.png">
+  <meta property="og:url" content="https://griffinjoshua615-ops.github.io/veterans-pest-control-website/">
   <meta name="twitter:card" content="summary_large_image">
   <title>Veterans Pest Control LLC | Veteran-Owned Pest Control</title>
-  <link rel="canonical" href="https://veteranspestcontrolllc.com/">
+  <link rel="canonical" href="https://griffinjoshua615-ops.github.io/veterans-pest-control-website/">
+  <meta name="theme-color" content="#092640">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" as="image" href="hero.jpg" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -44,10 +50,11 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Veterans Pest Control home">
-        <img src="logo.png" alt="Veterans Pest Control LLC logo" class="logo">
+        <img src="logo.png" alt="Veterans Pest Control LLC logo" class="logo" width="320" height="320" fetchpriority="high">
       </a>
       <input class="menu-toggle" type="checkbox" id="menu-toggle">
       <label class="menu-button" for="menu-toggle" aria-label="Toggle menu">
@@ -58,6 +65,7 @@
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="identify.html">Identify Pests</a></li>
+          <li><a href="faq.html">FAQ</a></li>
           <li><a href="why.html">Why Choose Us</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html" class="nav-cta">Get a Free Quote</a></li>
@@ -66,7 +74,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero" style="background-image:url('hero.jpg');">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
@@ -167,11 +175,35 @@
         <div class="quote-panel">
           <p class="quote-mark">“</p>
           <p>They arrived on time, did a thorough inspection, and followed up to make sure we were satisfied.</p>
-          <strong>— Luis G., Birmingham</strong>
+          <strong>Luis G., Birmingham</strong>
         </div>
       </div>
     </section>
 
+
+    <section class="light section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow dark">Service areas</p>
+          <h2>Where we work</h2>
+          <p>Based in Selma and serving central Alabama, with service into neighboring Georgia.</p>
+        </div>
+        <div class="area-grid">
+          <a class="area-card" href="pest-control-selma-al.html">
+            <strong>Selma, AL</strong>
+            <span>Dallas County</span>
+          </a>
+          <a class="area-card" href="pest-control-montgomery-al.html">
+            <strong>Montgomery, AL</strong>
+            <span>Montgomery County</span>
+          </a>
+          <a class="area-card" href="pest-control-prattville-al.html">
+            <strong>Prattville, AL</strong>
+            <span>Autauga County</span>
+          </a>
+        </div>
+      </div>
+    </section>
     <section class="container section">
       <div class="cta-panel">
         <div>
@@ -190,7 +222,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <img src="logo.png" alt="Veterans Pest Control LLC logo" class="footer-logo">
+        <img src="logo.png" alt="Veterans Pest Control LLC logo" class="footer-logo" width="320" height="320" loading="lazy">
         <p>Veteran-owned pest control serving Alabama and Georgia.</p>
       </div>
       <div>
@@ -199,15 +231,32 @@
         <a href="mailto:veteranspestcontrolllc@gmail.com">veteranspestcontrolllc@gmail.com</a>
       </div>
       <div>
+        <h3>Explore</h3>
+        <a href="services.html">Services</a>
+        <a href="faq.html">Common questions</a>
+        <a href="identify.html">Identify a pest</a>
+      </div>
+      <div>
+        <h3>Service areas</h3>
+        <a href="pest-control-selma-al.html">Selma, AL</a>
+        <a href="pest-control-montgomery-al.html">Montgomery, AL</a>
+        <a href="pest-control-prattville-al.html">Prattville, AL</a>
+      </div>
+      <div class="footer-links">
         <h3>Visit</h3>
         <p>49 Craig Industrial Park<br>Selma, AL 36701</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=49+Craig+Industrial+Park,+Selma,+AL" target="_blank" rel="noopener">Get directions →</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=49+Craig+Industrial+Park,+Selma,+AL" target="_blank" rel="noopener">Get directions &rarr;</a>
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>© 2025 Veterans Pest Control, LLC.</span>
-      <span>Monday–Friday · 8 AM–5 PM</span>
+      <span>&copy; 2025 Veterans Pest Control, LLC.</span>
+      <span>Monday to Friday &middot; 8 AM to 5 PM</span>
     </div>
   </footer>
+  <div class="call-bar" aria-label="Quick contact">
+    <a class="cb-call" href="tel:13348934443">Call now</a>
+    <a class="cb-quote" href="contact.html">Free quote</a>
+  </div>
+  <script src="site.js" defer></script>
 </body>
 </html>

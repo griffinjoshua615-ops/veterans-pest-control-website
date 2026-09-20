@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://griffinjoshua615-ops.github.io/veterans-pest-control-website/sitemap.xml

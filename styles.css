@@ -666,8 +666,8 @@ h3 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1.6fr repeat(3, 1fr);
+  gap: 2.4rem;
 }
 
 .footer-logo { height: 58px; width: auto; }
@@ -848,4 +848,436 @@ h3 {
   *, *::before, *::after {
     transition: none !important;
   }
+}
+
+/* ============================================================
+   Enhancements: accessibility, lead capture, mobile call bar
+   ============================================================ */
+
+/* Skip link so keyboard users can jump past the nav */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 200;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 0.85rem 1.4rem;
+  font-weight: 700;
+  border-radius: 0 0 10px 0;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* Visible focus ring everywhere, not just where it was remembered */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.menu-button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Reserve space for images so the page does not jump while loading */
+.pest-card img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+  background: var(--sand);
+}
+
+/* ---------- lead form feedback ---------- */
+.form-status {
+  margin-top: 1.1rem;
+  border-radius: 12px;
+  line-height: 1.55;
+}
+.form-status:empty {
+  margin-top: 0;
+}
+.form-status.is-success,
+.form-status.is-error {
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--line);
+}
+.form-status.is-success {
+  background: #eef6f1;
+  border-color: #bcd9c9;
+  color: #14432f;
+}
+.form-status.is-error {
+  background: #fdf1ec;
+  border-color: #f0c3ae;
+  color: #7d2f10;
+}
+.form-status a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.form-status-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.95rem;
+}
+.form-status-actions .button {
+  text-decoration: none;
+}
+.quote-form button[disabled] {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+/* Honeypot: off-screen, never shown to a person */
+.form-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Required-field marker */
+.req {
+  color: var(--gold-dark);
+  font-weight: 700;
+}
+
+/* ---------- FAQ ---------- */
+.faq-list {
+  display: grid;
+  gap: 1rem;
+  max-width: 900px;
+}
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.35rem 1.4rem;
+  box-shadow: var(--shadow);
+}
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--navy);
+  padding: 1.05rem 0;
+  font-size: 1.05rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  color: var(--gold-dark);
+  font-size: 1.5rem;
+  line-height: 1;
+  flex: none;
+}
+.faq-item[open] summary::after { content: "\2013"; }
+.faq-item p {
+  margin: 0 0 1.1rem;
+  color: var(--muted);
+}
+
+/* ---------- sticky call bar (mobile only) ---------- */
+.call-bar { display: none; }
+
+@media (max-width: 720px) {
+  .call-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 120;
+    padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom));
+    background: rgba(9, 38, 64, 0.97);
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.22);
+  }
+  .call-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 50px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  .call-bar .cb-call {
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .call-bar .cb-quote {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+  }
+  /* keep the footer clear of the bar */
+  body { padding-bottom: 74px; }
+}
+
+@media (max-width: 720px) and (prefers-reduced-motion: no-preference) {
+  .call-bar { transition: transform 0.2s ease; }
+}
+
+/* form intro line */
+.form-lede {
+  margin: 0 0 1.1rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+/* footer column stacking for the added Explore links */
+@media (max-width: 1000px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+}
+
+/* Outline buttons sit on a light panel inside the form status box,
+   so they need dark ink rather than the on-dark-hero treatment. */
+.form-status .button-outline {
+  border-color: var(--navy);
+  color: var(--navy);
+  background: transparent;
+}
+.form-status .button-outline:hover,
+.form-status .button-outline:focus-visible {
+  background: rgba(9, 38, 64, 0.08);
+}
+.form-status.is-error .button-outline {
+  border-color: #7d2f10;
+  color: #7d2f10;
+}
+.form-status.is-error .button-outline:hover,
+.form-status.is-error .button-outline:focus-visible {
+  background: rgba(125, 47, 16, 0.08);
+}
+
+/* ============================================================
+   Pest pages and service-area pages
+   ============================================================ */
+
+.breadcrumbs {
+  background: var(--sand);
+  border-bottom: 1px solid var(--line);
+  font-size: 0.87rem;
+}
+.breadcrumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0.85rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  color: var(--muted);
+}
+.breadcrumbs li + li::before {
+  content: "/";
+  margin-right: 0.45rem;
+  color: var(--line);
+}
+.breadcrumbs a {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 600;
+}
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs li[aria-current] { color: var(--muted); }
+
+/* photo beside the signs checklist */
+.pest-lead {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 3rem;
+  align-items: start;
+}
+.pest-lead picture img {
+  width: 100%;
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  background: var(--sand);
+}
+.pest-note {
+  margin-top: 1.4rem;
+  font-size: 0.93rem;
+  color: var(--muted);
+}
+.pest-note a { font-weight: 700; color: var(--navy); }
+
+/* "why it matters" cards */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.why-block {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.7rem;
+  box-shadow: var(--shadow);
+}
+.why-block h3 {
+  margin: 0 0 0.7rem;
+  color: var(--navy);
+  font-size: 1.12rem;
+  line-height: 1.35;
+}
+.why-block p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* two-column checklist for the self-help section */
+.check-list.two-col {
+  columns: 2;
+  column-gap: 3rem;
+}
+.check-list.two-col li {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+/* related pest tiles */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+.related-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.related-card:hover,
+.related-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 50px rgba(9, 38, 64, 0.16);
+}
+.related-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--sand);
+}
+.related-card span {
+  display: block;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* the pest hero sits under a breadcrumb bar, so it needs less top air */
+.pest-hero { padding-top: 3.6rem; }
+
+/* five-column footer now that service areas are listed */
+.footer-grid { grid-template-columns: 1.5fr repeat(4, 1fr); gap: 2rem; }
+
+@media (max-width: 1000px) {
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .related-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 720px) {
+  .pest-lead { grid-template-columns: 1fr; gap: 1.8rem; }
+  .why-grid { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: 1fr 1fr; }
+  .check-list.two-col { columns: 1; }
+}
+
+@media (max-width: 560px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+}
+
+/* service-area tiles */
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.area-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.area-card:hover,
+.area-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 50px rgba(9, 38, 64, 0.16);
+}
+.area-card strong {
+  display: block;
+  color: var(--navy);
+  font-size: 1.15rem;
+}
+.area-card span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.pest-card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.pest-card-more {
+  display: block;
+  padding: 0 1.2rem 1.2rem;
+  color: var(--gold-dark);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+@media (max-width: 720px) {
+  .area-grid { grid-template-columns: 1fr; }
+}
+
+/* cost transparency block */
+.cost-panel {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 2.6rem;
+  align-items: start;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 2.6rem;
+  box-shadow: var(--shadow);
+}
+.cost-panel h2 { margin-top: 0.2rem; }
+.timing-card {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 16px;
+  padding: 1.8rem;
+}
+.timing-card .card-kicker { color: var(--gold); }
+.timing-card p { color: rgba(255, 255, 255, 0.88); }
+.timing-card .button { margin-top: 0.6rem; width: 100%; text-align: center; }
+
+@media (max-width: 860px) {
+  .cost-panel { grid-template-columns: 1fr; gap: 1.8rem; padding: 1.8rem; }
 }
