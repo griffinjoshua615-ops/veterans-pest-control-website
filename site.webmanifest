@@ -1,0 +1,13 @@
+{
+  "name": "Veterans Pest Control LLC",
+  "short_name": "Veterans Pest",
+  "description": "Veteran-owned pest control for homes and businesses in Alabama and Georgia.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#faf9f5",
+  "theme_color": "#092640",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
