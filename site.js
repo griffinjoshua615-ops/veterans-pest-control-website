@@ -8,7 +8,7 @@
    Example (FormSubmit, no account needed, one confirmation click):
      var FORM_ENDPOINT = "https://formsubmit.co/veteranspestcontrolllc@gmail.com";
    ------------------------------------------------------------- */
-var FORM_ENDPOINT = "";
+var FORM_ENDPOINT = "https://formsubmit.co/veteranspestcontrolllc@gmail.com";
 
 var BUSINESS_EMAIL = "veteranspestcontrolllc@gmail.com";
 var BUSINESS_SMS   = "13348934443";
